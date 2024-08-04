@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aquaculture Compendium</title>
+    <style>
+        :root {
+            --primary-color: #0077be;
+            --secondary-color: #f0f8ff;
+            --text-color: #333;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--secondary-color);
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        nav {
+            background-color: #005c99;
+            padding: 1rem;
+        }
+
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 1rem;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        section {
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        h3 {
+            color: var(--primary-color);
+            margin-top: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        ul {
+            padding-left: 2rem;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 0.5rem;
+            text-align: left;
+        }
+
+        th {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .accordion {
+            background-color: #eee;
+            color: #444;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            text-align: left;
+            border: none;
+            outline: none;
+            transition: 0.4s;
+        }
+
+        .active, .accordion:hover {
+            background-color: #ccc;
+        }
+
+        .panel {
+            padding: 0 18px;
+            background-color: white;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.2s ease-out;
+        }
+
+        @media screen and (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav ul li {
+                margin: 0.5rem 0;
+            }
+        }
+
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            margin-top: 2rem;
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Aquaculture Compendium</h1>
+        <p>Comprehensive information on fish farming</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#vision-mission">Vision & Mission</a></li>
+            <li><a href="#farming-systems">Farming Systems</a></li>
+            <li><a href="#health">Health</a></li>
+            <li><a href="#water-quality">Water Quality</a></li>
+            <li><a href="#feed">Feed</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="vision-mission">
+            <h2>Vision & Mission</h2>
+            <p><strong>Vision:</strong> To create a platform that provides comprehensive information on fish farming.</p>
+            <p><strong>Mission:</strong> To highlight local aquaculture practice.</p>
+        </section>
+
+        <section id="farming-systems">
+            <h2>Farming Systems</h2>
+            <button class="accordion">Extensive System</button>
+            <div class="panel">
+                <p>It involves aquatic organisms farmed in enclosed structures placed within habitats.</p>
+                <p><strong>Examples:</strong> catfish, oysters, tilapia</p>
+                <h3>Advantage</h3>
+                <ul>
+                    <li>It makes it possible to selectively increase the production of species for man's food.</li>
+                </ul>
+                <h3>Disadvantages</h3>
+                <ul>
+                    <li>Causes eutrophication</li>
+                    <li>Disease spread</li>
+                    <li>Invasive species</li>
+                </ul>
+            </div>
+
+            <button class="accordion">Semi-Intensive System</button>
+            <div class="panel">
+                <p>It combines natural food sources with supplementary feeding to enhance fish production.</p>
+                <p><strong>Examples:</strong> prawns, shrimps, tilapia</p>
+                <h3>Advantages</h3>
+                <ul>
+                    <li>Provides protection for fishes.</li>
+                    <li>Equipment needed is inexpensive.</li>
+                </ul>
+                <h3>Disadvantages</h3>
+                <ul>
+                    <li>Lower productivity.</li>
+                    <li>Higher infrastructure cost.</li>
+                </ul>
+            </div>
+
+            <button class="accordion">Intensive System</button>
+            <div class="panel">
+                <p>Highly controlled fish farming where maximum production of fish is achieved from a minimum quantity of water.</p>
+                <h3>Advantages</h3>
+                <ul>
+                    <li>Produces more fish since there is higher productivity.</li>
+                    <li>Efficient resource use.</li>
+                </ul>
+                <h3>Disadvantages</h3>
+                <ul>
+                    <li>Water pollution</li>
+                    <li>Can cause eutrophication.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="health">
+            <h2>Health</h2>
+            <h3>Diseases</h3>
+            <button class="accordion">Mouth Fungus Disease</button>
+            <div class="panel">
+                <p><strong>Affects:</strong> Tilapia</p>
+                <p><strong>Symptom:</strong> White cottony patches around the mouth</p>
+                <p><strong>Cause:</strong> Bacterium chondrococcus columnaris</p>
+                <p><strong>Treatment:</strong> Penicillin at 10000 units per litre is effective.</p>
+            </div>
+
+            <button class="accordion">Tuberculosis</button>
+            <div class="panel">
+                <p><strong>Affects:</strong> Catfish</p>
+                <p><strong>Symptoms:</strong> Hollow belly, Sores</p>
+                <p><strong>Cause:</strong> Bacterium mycobacterium piscium</p>
+                <p><strong>Treatment:</strong> Since there is no treatment, destroy the infected fish and keep away from the other species.</p>
+            </div>
+
+            <button class="accordion">Ulcer</button>
+            <div class="panel">
+                <p><strong>Affects:</strong> Mudfish, Tilapia</p>
+                <p><strong>Symptoms:</strong> Slow body movement, Loss of appetite</p>
+                <p><strong>Cause:</strong> Bacteria haemophilus</p>
+                <p><strong>Treatment:</strong> Use antibiotics oxytetracycline and chloramphenicol.</p>
+            </div>
+        </section>
+
+        <section id="water-quality">
+            <h2>Water Quality</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Fish</th>
+                        <th>pH Level</th>
+                        <th>Salinity</th>
+                        <th>Temperature</th>
+                        <th>Dissolved Oxygen</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Tilapia</td>
+                        <td>7-9</td>
+                        <td>36 ppm</td>
+                        <td>22-29°C</td>
+                        <td>5-7 ppm</td>
+                    </tr>
+                    <tr>
+                        <td>Catfish</td>
+                        <td>6.5-7.5</td>
+                        <td>5-10 ppt</td>
+                        <td>25.5-29°C</td>
+                        <td>4mg/l</td>
+                    </tr>
+                    <tr>
+                        <td>Mudfish</td>
+                        <td>5.5-7.5</td>
+                        <td>Low salinity</td>
+                        <td>22-24°C</td>
+                        <td>5-10 ppm</td>
+                    </tr>
+                    <tr>
+                        <td>Shrimps</td>
+                        <td>7.5-8.5</td>
+                        <td>4-35g/l</td>
+                        <td>28°C</td>
+                        <td>5mg/l</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="feed">
+            <h2>Feed</h2>
+            <button class="accordion">Processed Fish Feed</button>
+            <div class="panel">
+                <ul>
+                    <li>Have a long shelf life</li>
+                    <li>Can be kept for months</li>
+                    <li>Contain proteins, vitamins, lipids, fats and carbohydrates</li>
+                    <li>Can be formulated to meet specific dietary needs of fish species</li>
+                </ul>
+            </div>
+
+            <button class="accordion">Dried Fish Feed</button>
+            <div class="panel">
+                <ul>
+                    <li>They are not heavily processed</li>
+                    <li>They can be a supplement to generic diet</li>
+                    <li>Low in calories</li>
+                    <li>Bloodworms and plankton are in this form</li>
+                </ul>
+            </div>
+
+            <button class="accordion">Fresh Fish Feed</button>
+            <div class="panel">
+                <ul>
+                    <li>This is a great source of nutritious feed</li>
+                    <li>Requires a little more preparation before giving to fish</li>
+                    <li>Can be used to feed herbivorous fishes</li>
+                    <li>They contain more vitamins and carbohydrates</li>
+                    <li>Examples of fresh feed include cabbage, lettuce and green peas</li>
+                </ul>
+            </div>
+
+            <h3>Feed Requirement for Tilapia, Catfish and Shrimps in Ghana</h3>
+            <button class="accordion">Tilapia (Feeding Strategy: broadcasting by hand)</button>
+            <div class="panel">
+                <ul>
+                    <li>Animal by-products</li>
+                    <li>Oilseed meal and cakes</li>
+                    <li>Legumes and cereals</li>
+                </ul>
+            </div>
+
+            <button class="accordion">Catfish (Feeding Strategy: by hand or automatic feeder)</button>
+            <div class="panel">
+                <ul>
+                    <li>Fishmeal</li>
+                    <li>Soybean cake</li>
+                    <li>Cassava</li>
+                </ul>
+            </div>
+
+            <button class="accordion">Shrimps (Feeding Strategy: broadcasting)</button>
+            <div class="panel">
+                <ul>
+                    <li>Spinach</li>
+                    <li>Squash vegetable</li>
+                    <li>Wheat flour</li>
+                </ul>
+            </div>
+        </section>
+
+         <footer>
+            <p>&copy; 2024 Aquaculture Compendium | All Rights Reserved</p>
+        </footer>
+    </main>
+
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.maxHeight) {
+                    panel.style.maxHeight = null;
+                } else {
+                    panel.style.maxHeight = panel.scrollHeight + "px";
+                }
+            });
+        }
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
